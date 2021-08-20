@@ -1,3 +1,18 @@
+:root {
+    --color-main: #635854;
+    --color-text: #fff;
+}
+
+@font-face {
+    font-family: "Bebas Neue";
+    src: local("BebasNeueRegular"),
+        url("../fonts/BebasNeueRegular.woff2") format("woff2"),
+        url("../fonts/BebasNeueRegular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     font-family: "Roboto", sans-serif;
     font-size: 15px;
@@ -9,6 +24,15 @@ body {
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -17,7 +41,7 @@ img {
 
 .header {
     padding: 12px 0;
-    background-color: #635854;
+    background-color: var(--color-main);
     border-bottom: 4px solid #3596f5;
 }
 
@@ -47,7 +71,7 @@ img {
 
 .navbar-link {
     text-decoration: none;
-    color: #fff;
+    color: var(--color-text);
 }
 
 .navbar-contacts {
@@ -58,13 +82,84 @@ img {
     display: block;
     margin-bottom: 4px;
     font-size: 14px;
-    color: #fff;
+    color: var(--color-text);
 }
 
 .navbar-phone {
     font-size: 17px;
     font-weight: 700;
 
-    color: #fff;
+    color: var(--color-text);
     text-decoration: none;
+}
+
+.main {
+    max-width: 1280px;
+    margin: auto;
+    padding-top: 54px;
+
+    display: flex;
+}
+
+.main-info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.home-image path {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.home-image path:hover {
+    opacity: 1;
+}
+
+.counter-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 115px;
+}
+
+.counter-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.counter-arrow-down {
+    transform: rotateX(-180deg);
+}
+
+.main-title {
+    font-family: "Bebas Neue", serif;
+    font-size: 37px;
+    line-height: 1;
+    font-weight: normal;
+
+    color: var(--color-main);
+}
+
+.counter {
+    font-family: "Bebas Neue", serif;
+    margin: 10px 0;
+
+    font-size: 105px;
+    color: var(--color-main);
+}
+
+.button-primary {
+    padding: 16px 36px;
+    color: var(--color-text);
+    background-color: #3596f5;
+    border-radius: 6px;
+    border: none;
+
+    cursor: pointer;
 }
